@@ -11,6 +11,7 @@
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  cursor: none;
 }
 
 
@@ -103,7 +104,8 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-width: 1200px;
+  width: 100%;
+  background-color: var(--secondary-color);
   z-index: 3;
 }
 
@@ -115,5 +117,24 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: green;
+  background-color: var(--secondary-color);
+}
+
+
+/* footer */
+
+
+
+/* cursor */
+.cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  mix-blend-mode: difference;
+  transition: .1s;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 10;
 }
