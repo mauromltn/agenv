@@ -18,7 +18,7 @@
 
 /* body */
 body {
-  font-family: "Chivo Mono", monospace;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -27,6 +27,14 @@ body {
   margin: 0;
   color: var(--primary-color);
   background-color: var(--primary-color);
+}
+
+
+/* headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Rubik Mono One", system-ui;
+  font-weight: 100;
+  margin: 0;
 }
 
 
@@ -45,13 +53,10 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px;
   width: 100%;
-  font-size: 17px;
-  font-weight: 10;
+  height: 60px;
+  font-size: 16px;
   padding: 0 20px;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
   mix-blend-mode: difference;
   z-index: 5;
 }
@@ -86,7 +91,7 @@ nav a {
   background-image: url("../../icons/isolaremota.webp");
   height: 100vh;
   width: 100vw;
-  background-position-y: calc(100vh + 500px);
+  background-position-y: calc(100vh + 600px);
   background-size: cover;
   overflow: hidden;
   border-radius: 15px 15px 0 0;
@@ -102,24 +107,65 @@ nav a {
 
 /* main */
 main {
+  width: 100%;
+  z-index: 2;
+}
+
+
+/* curve */
+.curve {
+  width: 100%;
+  height: 100%;
+  margin-bottom: -4px;
+}
+
+/* trips */
+#travel {
+  display: block;
+  height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
   background-color: var(--secondary-color);
-  z-index: 3;
 }
 
+#travel h1 {
+  font-size: 60px;
+  margin-bottom: 50px;
+}
 
-/* trips */
-.trips {
-  height: 100vh;
-  width: 100%;
+.destinations {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--secondary-color);
+  width: 100%;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.destinationcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 450px;
+  width: 300px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  transition: .3s ease-in-out;
+}
+
+.destinationcontainer:hover {
+  transform: scale(1.05);
+}
+
+.destinationcontainer img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 
@@ -139,4 +185,12 @@ main {
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 10;
+}
+
+
+/* media queries */
+@media (max-height: 1000px) {
+  .caption {
+    background-position-y: calc(100vh + 500px);
+  }
 }
