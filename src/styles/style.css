@@ -99,6 +99,7 @@ nav a {
 .caption span {
   font-family: "Rubik Mono One", system-ui;
   font-size: 120px;
+  line-height: 1.2;
   mix-blend-mode: difference;
 }
 
