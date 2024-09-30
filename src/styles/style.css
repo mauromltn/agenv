@@ -31,7 +31,7 @@ body {
 
 
 /* headings */
-h1, h2, h3, h4, h5, h6 {
+span, h1 {
   font-family: "Rubik Mono One", system-ui;
   font-weight: 100;
   margin: 0;
@@ -93,11 +93,9 @@ nav a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1;
 }
 
 .caption span {
-  font-family: "Rubik Mono One", system-ui;
   font-size: 120px;
   line-height: 1.2;
   mix-blend-mode: difference;
@@ -127,7 +125,7 @@ nav a {
 /* main */
 main {
   width: 100%;
-  z-index: 2;
+  z-index: 1;
 }
 
 
@@ -139,8 +137,7 @@ main {
 }
 
 /* trips */
-#travel {
-  display: block;
+#travel, #service {
   height: 100vh;
   width: 100%;
   display: flex;
@@ -150,7 +147,7 @@ main {
   background-color: var(--secondary-color);
 }
 
-#travel h1 {
+#travel h1, #service h1 {
   font-size: 60px;
   margin-bottom: 50px;
 }
@@ -167,8 +164,8 @@ main {
 .destinationcontainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 450px;
+  justify-content: flex-start;
+  height: 400px;
   width: 300px;
   color: var(--secondary-color);
   background-color: var(--primary-color);
@@ -181,10 +178,24 @@ main {
 }
 
 .destinationcontainer img {
-  height: 100%;
-  width: 100%;
+  height: 200px;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
+}
+
+.destinationcontainer h2 {
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+.destinationcontainer p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.destinationcontainer .price {
+  font-weight: 600;
+  margin-left: 5px;
 }
 
 
